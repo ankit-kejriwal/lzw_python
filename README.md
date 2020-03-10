@@ -5,7 +5,7 @@
 
 ## **Introduction:**<br />
 
-The Lempel–Ziv–Welch (LZW) algorithm is a lossless data compression algorithm. LZW is an adaptive compression algorithm that does not assume prior knowledge of the input data distribution. This algorithm works well when the input data is sufficiently large and there is redundancy in the data.Two examples of commonly used file formats that use LZW compression are the GIF image format served from websites and the TIFF image format. LZW compression is also suitable for compressing text files, and is the algorithm in the compress Unix file compression utility.
+The Lempel–Ziv–Welch (LZW) algorithm is a lossless documents compression algorithm. LZW is an adaptive compression set of regulations that does now not anticipate prior information of the enter data distribution. This set of guidelines works well when the input records is sufficiently large and there's redundancy inside the statistics.Two examples of commonly used report codecs that use LZW compression are the GIF photograph layout served from internet websites and the TIFF photo format. LZW compression is also terrific for compressing textual content files, and is the algorithm inside the compress Unix record compression utility.
 
 ## **Application of LZW:**<br />
 
@@ -74,12 +74,12 @@ python3 decoder.py input1.lzw 9 <br />
 
 ## **Data Structure**<br />
 
-Dictionary is used to implement the algorithm. It containes the ASCII characters as KEY along with its ascii value as VALUE for encoding and vice versa in case of decoding.
+Dictionary is used to put into effect the algorithm. It containes the ASCII characters as KEY alongside with its ascii price as VALUE for encoding and vice versa in case of decoding.
 
 Note <br />
 open function is used for reading and writing to files. <br />
 For encoding, encoder.py file is used. It will generate compressed file. <br />
-For decoding, decoder.py is used. It will generate decoded text file, whose contents will be same as the initial input file. <br />
+For decoding, decoder.py is used. It will generate decoded textual content file, whose contents will be equal as the preliminary enter file. <br />
 
 ## **References:**<br />
 
