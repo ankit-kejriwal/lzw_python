@@ -1,7 +1,7 @@
-/**_
+<strong>
 @name Ankit Kejriwal
 @studentID 801156091
-_**/
+</strong>
 
 Project 1: LZW Compression
 Introduction:
