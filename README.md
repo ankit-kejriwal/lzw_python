@@ -5,18 +5,18 @@
 ## **Introduction:**<br />
 The Lempel–Ziv–Welch (LZW) algorithm is a lossless data compression algorithm. LZW is an adaptive compression algorithm that does not assume prior knowledge of the input data distribution. This algorithm works well when the input data is sufficiently large and there is redundancy in the data.Two examples of commonly used file formats that use LZW compression are the GIF image format served from websites and the TIFF image format. LZW compression is also suitable for compressing text files, and is the algorithm in the compress Unix file compression utility.
 
-Application of LZW
-GIF and TIFF files
-PDF files
-Unix Compress, gzip
+## **Application of LZW:**<br />
+GIF and TIFF files<br />
+PDF files<br />
+Unix Compress, gzip<br />
 
-Two steps of LZW Algorithm
-Encoding/Compressing
-Decoding/Decompressing
-LZW Algorithm
-Input File --> Compressed File --> Decompressed File
-First arrow shows the encoding done by encoding.py
-Second arrow shows the compressed file is decoded to original text using decoding.py
+## **Two steps of LZW Algorithm**<br />
+Encoding/Compressing<br />
+Decoding/Decompressing<br />
+LZW Algorithm<br />
+Input File --> Compressed File --> Decompressed File<br />
+First arrow shows the encoding done by encoding.py<br />
+Second arrow shows the compressed file is decoded to original text using decoding.py<br />
 
 Pseudocode of Encoding
 MAX_TABLE_SIZE=2(bit_length) //bit_length is number of encoding bits
