@@ -1,5 +1,5 @@
 <strong>
-@name Ankit Kejriwal \n
+@name Ankit Kejriwal
 @studentID 801156091
 </strong>
 
