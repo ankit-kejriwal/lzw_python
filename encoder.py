@@ -8,11 +8,11 @@ from struct import pack
 dictionary_size = 256
 file_name, bit_length = argv[1:]
 MAX_TABLE_SIZE = 2**int(bit_length)
-dictionary = {}
+encoder_dictionary = {}
 
 # Store the character in the dictionary
 for i in range(dictionary_size):
-    dictionary[chr(i)] = i
+    encoder_dictionary[chr(i)] = i
 
 # Read the content from the input file
 input_file_content = open(file_name).read()
@@ -24,25 +24,26 @@ string = ""
 sym = ""
 for c in input_file_content:
     sym = c
-    if (string + sym) in dictionary:
+    if (string + sym) in encoder_dictionary:
         print(string + "           " + sym + "         " + string + sym +
               "               " + "   Y        ")
         string = string + sym
     else:
         print(string + "          " + sym + "         " + string + sym +
               "            " + "     N          " + "            " +
-              str(dictionary[string]) + "          " + string + sym + ":" +
-              str(dictionary_size))
-        output_file.write(pack('>H', int(dictionary[string])))
+              str(encoder_dictionary[string]) + "          " + string + sym +
+              ":" + str(dictionary_size))
+        output_file.write(pack('>H', int(encoder_dictionary[string])))
         if dictionary_size < MAX_TABLE_SIZE:
-            dictionary[string + sym] = dictionary_size
+            encoder_dictionary[string + sym] = dictionary_size
             dictionary_size = dictionary_size + 1
         string = sym
 
 # if string is not empty
 if string:
     print("" + "          " + '' + "         " + "" + "            " +
-          "         Y          " + "            " + str(dictionary[string]))
-    output_file.write(pack('>H', int(dictionary[string])))
+          "         Y          " + "            " +
+          str(encoder_dictionary[string]))
+    output_file.write(pack('>H', int(encoder_dictionary[string])))
 
 output_file.close()
