@@ -5,13 +5,13 @@
 from sys import argv
 from struct import unpack
 
-dict_size = 256
+dictionary_size = 256
 file_name, bit_length = argv[1:]
 MAX_TABLE_SIZE = 2**int(bit_length)
 dictionary = {}
 
 # Store the character in the dictionary
-for i in range(dict_size):
+for i in range(dictionary_size):
     dictionary[i] = chr(i)
 
 # Read the content from the input file
@@ -32,8 +32,8 @@ while (len(data) == 2):
     else:
         new_string = dictionary[code]
     if len(dictionary) < MAX_TABLE_SIZE:  # check if table is not full
-        dictionary[dict_size] = string + new_string[0]
-        dict_size += 1
+        dictionary[dictionary_size] = string + new_string[0]
+        dictionary_size = dictionary_size + 1
     output_file.write(new_string)  # write the new string to the output file
     string = new_string
     data = input_file_content.read(2)
